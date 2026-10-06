@@ -29,6 +29,8 @@ This is a UI template with deterministic local answers. It does not analyze food
 Use Node **22.13+**, macOS, Xcode with an iOS simulator, and CocoaPods. This is an iPhone-first native project; Expo Go is not the preview target.
 
 ```bash
+git clone https://github.com/Appllama/zest-kcal-tracker.git
+cd zest-kcal-tracker
 npm ci
 npm run ios:release
 ```

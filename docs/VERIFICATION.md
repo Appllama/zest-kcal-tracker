@@ -54,4 +54,4 @@ Maestro is the default; IDB is optional. Both native scripts were verified on iP
 
 ## Limits
 
-This is a UI template with local fixture answers. Android/web, a nutrition model or backend, hardware camera/sensors/haptics, and physical-device frame-rate measurement are not verified. CI performs install, TypeScript, lint, regression checks, and iOS JavaScript export; native builds and motion review run separately on macOS. No remote Git repository or Actions run has been created for this extraction yet.
+This is a UI template with local fixture answers. Android/web, a nutrition model or backend, hardware camera/sensors/haptics, and physical-device frame-rate measurement are not verified. CI performs install, TypeScript, lint, regression checks, and iOS JavaScript export; native builds and motion review run separately on macOS. Live workflow results are available in the repository's [Actions tab](https://github.com/Appllama/zest-kcal-tracker/actions).

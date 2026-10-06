@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Zest",
+    "slug": "zest-kcal-tracker-template",
+    "scheme": "zest-kcal-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/images/icon.png",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "io.appllama.zestkcaltracker",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSMotionUsageDescription": "Zest gently follows the movement of your phone."
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Choose a meal photo to add to your food diary.",
+          "cameraPermission": "Take a photo of your meal to log it with Zest.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "17.0",
+            "enableSceneSupport": true
+          }
+        }
+      ],
+      "./plugins/with-quoted-ios-paths"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

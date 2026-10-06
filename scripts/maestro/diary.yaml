@@ -1,0 +1,49 @@
+appId: io.appllama.zestkcaltracker
+name: Sample meal, protein answer and calendar
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Good evening,.*"
+- assertNotVisible: "Back to chat collection"
+- openLink: "zest-kcal-tracker://?demo=1"
+- tapOn:
+    text: Open
+    optional: true
+- tapOn: "Log a meal"
+- tapOn: "Try a sample meal"
+- extendedWaitUntil:
+    visible: "Take dinner photo"
+    timeout: 10000
+- tapOn: "Take dinner photo"
+- tapOn: "Retake meal photo"
+- tapOn: "Take dinner photo"
+- tapOn: "Use meal photo"
+- extendedWaitUntil:
+    visible: "Log as dinner"
+    timeout: 10000
+- tapOn: "Log as dinner"
+- extendedWaitUntil:
+    visible: "Edit Pasta & garlic bread, 1120 estimated kilocalories"
+    timeout: 10000
+- tapOn: "Message Zest.*"
+- inputText: "how much protein"
+- tapOn: "Send message"
+- extendedWaitUntil:
+    visible: "70 g protein.*"
+    timeout: 10000
+- tapOn: "Open food diary"
+- assertVisible: "2240 kilocalories logged"
+- tapOn: "Previous month"
+- tapOn: "Next month"
+# Hosted SwiftUI controls may retain their pre-animation AX frame on iOS 27.
+# The verified close target is at the top trailing corner on iPhone 17 Pro.
+- tapOn:
+    point: "90%, 10%"
+- tapOn: "New Zest conversation"
+- assertVisible: "Log a meal"
+- tapOn: "Open food diary"
+- assertVisible: "2240 kilocalories logged"
+# Hosted SwiftUI controls may retain their pre-animation AX frame on iOS 27.
+# The verified close target is at the top trailing corner on iPhone 17 Pro.
+- tapOn:
+    point: "90%, 10%"

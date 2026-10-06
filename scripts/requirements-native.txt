@@ -1,0 +1,3 @@
+# Optional direct HID/AX checks. Maestro remains the default native runner.
+fb-idb==1.1.7
+protobuf==3.20.3

@@ -1,0 +1,52 @@
+[
+  {
+    "path": "assets/cookbooks/zest/photos/breakfast.png",
+    "bytes": 2741726,
+    "sha256": "6a9f3b8c9103fd09dde385ae80e61c973d944864dd4a56ccf4d2f6ed9ec0f25b"
+  },
+  {
+    "path": "assets/cookbooks/zest/photos/dinner.png",
+    "bytes": 2505861,
+    "sha256": "92a1760ce32178ef33b57b4125e2ff46a05b9b7183abad06af3d69dbcef58397"
+  },
+  {
+    "path": "assets/cookbooks/zest/photos/lunch.png",
+    "bytes": 2514102,
+    "sha256": "b7fec784a9a3ca73e01956fb9e03ccad9420792ba66fcb645fd37a62f456ed98"
+  },
+  {
+    "path": "assets/cookbooks/zest/stickers/bowl.svg",
+    "bytes": 2047,
+    "sha256": "62c854035a5931ba6f00e0cb541ce81465d0279e62d677c1f483c5c5726db9b8"
+  },
+  {
+    "path": "assets/cookbooks/zest/stickers/eggs.svg",
+    "bytes": 1417,
+    "sha256": "9b3af89e62a79e202115cc68c4f0963da6b4af9eaa660b20cc21a78d7ea55175"
+  },
+  {
+    "path": "assets/cookbooks/zest/stickers/orange.svg",
+    "bytes": 1671,
+    "sha256": "fe520c2d828fa5e1461662636d09f848192481c8bb20d1c2184e3c894096b4b6"
+  },
+  {
+    "path": "assets/cookbooks/zest/stickers/pasta.svg",
+    "bytes": 1646,
+    "sha256": "6e775258040ba8c3193f46e1b04187b5cfa4c90f54a77046ac7e4eb219497abf"
+  },
+  {
+    "path": "assets/cookbooks/zest/stickers/toast.svg",
+    "bytes": 2164,
+    "sha256": "d7fb7941b56e04e1b2073fd61e57389b51aac1188f9df1a3dff678d8578303ca"
+  },
+  {
+    "path": "assets/images/icon.png",
+    "bytes": 78206,
+    "sha256": "d11bb06cd14a0d9f9269de6d19da48aef65a77a43f3d49ec69e269d70baf5b90"
+  },
+  {
+    "path": "assets/images/icon.svg",
+    "bytes": 1931,
+    "sha256": "bfbfb5b1f20fc5300f96a6b300448183911464a182dc9021477a70b4b05bfb24"
+  }
+]

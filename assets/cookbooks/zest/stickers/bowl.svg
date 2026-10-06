@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><g stroke-linecap="round" stroke-linejoin="round">
+<path d="M27 88Q21 70 35 60Q32 43 48 44Q59 28 73 41Q87 27 99 41Q114 31 127 46Q143 34 151 52Q178 52 171 79L179 95Q170 147 135 158Q98 174 62 151Q34 132 27 88Z" fill="#FFFDF8" stroke="#FFFDF8" stroke-width="13"/>
+<path d="M31 89Q19 64 38 61Q35 44 51 48Q59 28 74 44Q91 27 100 47Q117 33 128 51Q146 36 153 58Q176 55 169 83Z" fill="#779258" stroke="#485D3D" stroke-width="1.6"/>
+<path d="M41 75Q51 58 69 65Q67 48 79 49Q91 44 99 63Q111 50 124 62Q141 52 151 73" fill="#AEC17C" stroke="#667D4B" stroke-width="1.4"/>
+<ellipse cx="99" cy="91" rx="77" ry="31" fill="#EAE1C6" stroke="#405D62" stroke-width="2"/>
+<ellipse cx="100" cy="89" rx="66" ry="22" fill="#C9C5A1"/>
+<g fill="#E8CF94" stroke="#A69161" stroke-width="1"><ellipse cx="62" cy="84" rx="9" ry="7"/><ellipse cx="78" cy="92" rx="9" ry="7"/><ellipse cx="94" cy="87" rx="9" ry="7"/><ellipse cx="54" cy="98" rx="9" ry="6"/><ellipse cx="92" cy="102" rx="9" ry="6"/></g>
+<g fill="#BE6550" stroke="#8A4B3B" stroke-width="1.4"><path d="M111 71Q121 67 127 77Q126 90 114 89Q106 82 111 71Z"/><path d="M138 87Q150 80 157 90Q157 102 144 102Q134 98 138 87Z"/></g>
+<g fill="#EBB68B"><ellipse cx="118" cy="78" rx="2" ry="4"/><ellipse cx="124" cy="82" rx="2" ry="3"/><ellipse cx="145" cy="92" rx="2" ry="3"/></g>
+<path d="M112 100Q126 74 140 68L148 72Q133 85 123 106Z" fill="#A6B66A" stroke="#627649" stroke-width="1.3"/>
+<path d="M122 98Q132 80 142 74" fill="none" stroke="#D2D995" stroke-width="3"/>
+<path d="M24 94Q47 114 97 116Q151 118 177 94Q169 140 133 156Q97 168 64 149Q35 135 24 94Z" fill="#85A8AC" stroke="#405D62" stroke-width="1.7"/>
+<path d="M34 107Q59 125 103 126Q143 127 165 112" fill="none" stroke="#C6D8D3" stroke-width="3"/>
+<path d="M47 116Q55 138 74 148M154 123l-5 12M155 130l-4 10M91 156l18 1" fill="none" stroke="#5A7F87" stroke-width="1.2"/>
+<path d="M44 77l7-3M70 66l4 3M99 75l4-4M122 103l5 1" fill="none" stroke="#4B6843" stroke-width="2"/>
+</g></svg>

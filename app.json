@@ -4,6 +4,12 @@
     "slug": "zest-kcal-tracker-template",
     "scheme": "zest-kcal-tracker",
     "version": "1.0.0",
+    "runtimeVersion": {
+      "policy": "fingerprint"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/a7f8ed59-5b36-4c85-980c-a59e4872132d"
+    },
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "icon": "./assets/images/icon.png",
@@ -20,8 +26,8 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Choose a meal photo to add to your food diary.",
-          "cameraPermission": "Take a photo of your meal to log it with Zest.",
+          "photosPermission": "Escolha uma foto para anexar ao seu diário.",
+          "cameraPermission": "Use a câmera para capturar conteúdo para seu diário.",
           "microphonePermission": false
         }
       ],
@@ -29,15 +35,23 @@
         "expo-build-properties",
         {
           "ios": {
-            "deploymentTarget": "17.0",
-            "enableSceneSupport": true
+            "deploymentTarget": "17.0"
           }
         }
-      ],
-      "./plugins/with-quoted-ios-paths"
+      ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "a7f8ed59-5b36-4c85-980c-a59e4872132d"
+      }
     }
   }
 }

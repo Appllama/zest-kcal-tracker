@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Text, TextInput, View } from "react-native";
+import { Text, TextInput, View, type TextInputInstance } from "react-native";
 import { z } from "zod";
 import { useAnimatedStyle, withTiming } from "react-native-reanimated";
 import { GlassSurface } from "./ui/GlassSurface";
@@ -25,7 +25,7 @@ export function ZestComposer({
   onCalendar: () => void;
   onHeight: (height: number) => void;
 }) {
-  const input = useRef<TextInput>(null);
+  const input = useRef<TextInputInstance>(null);
   const value = useRef("");
   const sending = useRef(false);
   const [textHeight, setTextHeight] = useState(42);

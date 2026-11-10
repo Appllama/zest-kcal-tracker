@@ -1,7 +1,13 @@
-import { View } from "react-native";
+import type { ComponentType, ReactElement } from "react";
+import { View, type ViewProps } from "react-native";
 import { BlurView } from "expo-blur";
 import { LinearGradient } from "expo-linear-gradient";
-import MaskedView from "@react-native-masked-view/masked-view";
+import NativeMaskedView from "@react-native-masked-view/masked-view";
+
+// Masked View's declaration extends NativeMethods, removed from the strict API.
+const MaskedView = NativeMaskedView as unknown as ComponentType<
+  ViewProps & { maskElement: ReactElement }
+>;
 
 /**
  * A reading boundary made of blur rather than a fade: three masked strengths,
@@ -11,10 +17,12 @@ export function ProgressiveBlur({
   height,
   edge,
   color,
+  tint = "light",
 }: {
   height: number;
   edge: "top" | "bottom";
   color: string;
+  tint?: "light" | "dark";
 }) {
   const reverse = edge === "bottom";
   return (
@@ -47,7 +55,7 @@ export function ProgressiveBlur({
           }
         >
           <BlurView
-            tint="light"
+            tint={tint}
             intensity={layer.intensity}
             style={{ flex: 1 }}
           />

@@ -49,7 +49,7 @@ npm run ios
 
 Native glass APIs require iOS 26+ and an SDK that provides them. The published previews were checked with **Xcode 27 / iOS 27 on iPhone 17 Pro**. An older runtime or SDK may render different glass even when the API is available. The deployment target is iOS 17; unsupported devices and Reduce Transparency receive an opaque, legible surface.
 
-`enableSceneSupport: true` is intentional. Build against the current Apple SDK, keep glass outside opacity/mask ancestors and opaque container fills, and verify background response and touch expansion in the actual simulator. A successful build alone does not verify the material. [Native material and motion notes](docs/MOTION_SPEC.md).
+Expo SDK 58 enables UIKit scene support by default. Build against the current Apple SDK, keep glass outside opacity/mask ancestors and opaque container fills, and verify background response and touch expansion in the actual simulator. A successful build alone does not verify the material. [Native material and motion notes](docs/MOTION_SPEC.md).
 
 ### Try the sample diary
 

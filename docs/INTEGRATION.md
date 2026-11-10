@@ -1,6 +1,6 @@
 # Integration
 
-`src/app/index.tsx` mounts `ZestScreen` directly. The sole route accepts `demo=1`; this remounts the screen and resets its local diary to sample data. Any other value leaves the stored diary alone. There is no chat-collection route or root back action.
+`src/app/index.tsx` opens the personal diary. The explicit `demo=1` query still opens the legacy Zest sample flow. The personal diary stores each entry and optional image under `compasso-entries` in Documents, separate from the legacy meal data. It publishes each entry directory after writing both the entry and its attachment.
 
 ## Native providers and identity
 

@@ -46,7 +46,7 @@ test("visual answers use actual logged totals, categories and partial protein es
     meal({ protein: 20 }),
     meal({ id: "dinner", type: "Dinner", kcal: 700 }),
   ];
-  assert.equal(answerAbout("my day", meals, 2000).value, "1,180");
+  assert.equal(answerAbout("my day", meals, 2000).value, (1180).toLocaleString());
   assert.equal(answerAbout("breakfast", meals, 2000).value, "480");
   const protein = answerAbout("protein", meals, 2000);
   assert.equal(protein.value, "20");
@@ -70,7 +70,7 @@ test("over-guide answers remain supportive without compensation advice", () => {
     [meal({ kcal: 2180 })],
     2000,
   );
-  assert.equal(answer.value, "2,180");
+  assert.equal(answer.value, (2180).toLocaleString());
   assert.match(answer.caption, /180 above/);
   assert.match(answer.detail, /Be kind to yourself/);
   assert.doesNotMatch(answer.detail, /skip|burn|restrict|fast|guilt/);

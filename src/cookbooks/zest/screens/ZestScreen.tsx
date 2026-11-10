@@ -1,5 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Alert, Keyboard, Linking, Pressable, Text, View } from "react-native";
+import {
+  Alert,
+  Keyboard,
+  Linking,
+  Pressable,
+  Text,
+  View,
+  type ScrollViewInstance,
+} from "react-native";
 import {
   KeyboardController,
   KeyboardEvents,
@@ -111,10 +119,14 @@ export function ZestScreen({
   // A single native scroll follows measured content changes. No delayed
   // scrollToEnd calls compete with keyboard-controlled content insets.
   const followContent = () => {
-    if (!touching.current && !KeyboardController.isVisible())
-      list.current
-        ?.getNativeScrollRef()
-        ?.scrollToEnd({ animated: !scene.reduced });
+    if (!touching.current && !KeyboardController.isVisible()) {
+      // FlashList types this instance as the ScrollView component.
+      const scroll = list.current?.getNativeScrollRef() as
+        | ScrollViewInstance
+        | null
+        | undefined;
+      scroll?.scrollToEnd({ animated: !scene.reduced });
+    }
   };
   useEffect(() => {
     const show = KeyboardEvents.addListener("keyboardDidShow", () =>

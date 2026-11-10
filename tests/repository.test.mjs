@@ -1,11 +1,12 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
-import { resolve, relative, dirname } from "node:path";
+import { resolve, relative, dirname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 const root = fileURLToPath(new URL("../", import.meta.url));
 const text = (path) => readFileSync(resolve(root, path), "utf8");
+const repoPath = (path) => relative(root, path).split(sep).join("/");
 function files(dir) {
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const path = resolve(dir, entry.name);
@@ -18,7 +19,7 @@ test("asset inventory is complete, checksum-valid and contains no retired stock 
   assert.deepEqual(
     manifest.map((item) => item.path).sort(),
     files(resolve(root, "assets"))
-      .map((path) => relative(root, path))
+      .map(repoPath)
       .sort(),
   );
   for (const item of manifest) {
@@ -54,7 +55,7 @@ test("every relative source import and artwork reference resolves within this pr
       );
     }
   }
-  assert.ok(!sources.some((path) => /\/(plain|kin|companion)\//.test(path)));
+  assert.ok(!sources.map(repoPath).some((path) => /\/(plain|kin|companion)\//.test(path)));
 });
 
 test("published Markdown uses valid local file links and previews", () => {
@@ -78,12 +79,13 @@ test("published Markdown uses valid local file links and previews", () => {
   }
 });
 
-test("root mounts only Zest and keeps sample seeding explicit", () => {
+test("root opens the personal diary and keeps the Zest demo explicit", () => {
   const routes = files(resolve(root, "src/app"))
-    .map((path) => relative(root, path))
+    .map(repoPath)
     .sort();
   assert.deepEqual(routes, ["src/app/_layout.tsx", "src/app/index.tsx"]);
   assert.match(text("src/app/index.tsx"), /demo={demo === "1"}/);
+  assert.match(text("src/app/index.tsx"), /return <DiaryScreen \/>/);
   const screen = text("src/cookbooks/zest/screens/ZestScreen.tsx");
   assert.doesNotMatch(
     screen,

@@ -8,13 +8,17 @@ import { KeyboardChatScrollView } from "react-native-keyboard-controller";
  */
 export const ZestChatScroll = forwardRef<
   ComponentRef<typeof KeyboardChatScrollView>,
-  ScrollViewProps
+  ScrollViewProps &
+    Pick<
+      React.ComponentProps<typeof KeyboardChatScrollView>,
+      "extraContentPadding" | "freeze" | "keyboardLiftBehavior" | "offset"
+    >
 >(function ZestChatScroll(props, ref) {
   return (
     <KeyboardChatScrollView
+      keyboardLiftBehavior="whenAtEnd"
       {...props}
       ref={ref}
-      keyboardLiftBehavior="whenAtEnd"
       automaticallyAdjustContentInsets={false}
       contentInsetAdjustmentBehavior="never"
     />

@@ -45,7 +45,7 @@ export function GlassButton({
           modifiers={[
             buttonStyle("glass"),
             buttonBorderShape("circle"),
-            controlSize("large"),
+            controlSize(size < 44 ? "regular" : "large"),
             accessibilityLabel(label),
             foregroundStyle(theme.ink),
           ]}

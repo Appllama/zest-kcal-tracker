@@ -6,7 +6,7 @@ Zest uses one shared scene on the UI thread. The lemon, composer, background and
 
 `components/ui/GlassSurface.tsx` renders `expo-glass-effect` GlassView when both API and material are available and Reduce Transparency is disabled. The system owns its rim, optics, shadow and interactive highlight. `GlassButton.tsx` hosts SwiftUI `buttonStyle("glass")` circular controls. Unsupported runtimes receive an opaque surface.
 
-Build against an Apple SDK that provides Liquid Glass, run on a matching supported runtime, and retain `enableSceneSupport` in the Expo build-properties plugin. The approved material was verified with Xcode 27 and iOS 27. API availability on an older build/runtime is not proof of equivalent optics. Rebuild native code after changing SDK/config; Metro refresh cannot change the linked SDK or Info.plist.
+Build against an Apple SDK that provides Liquid Glass and run on a matching supported runtime. Expo SDK 58 enables UIKit scene support by default. The approved material was verified with Xcode 27 and iOS 27. API availability on an older build/runtime is not proof of equivalent optics. Rebuild native code after changing SDK/config; Metro refresh cannot change the linked SDK or Info.plist.
 
 Do not put alpha animation, a mask, a clipped decorative container or a painted surface behind/over the native material. Its blur and color response depend on the actual content behind it. The diary's fixed BlurView fades in a separate sibling; changing blur intensity every frame previously recreated UIKit's animator and interrupted travel.
 
